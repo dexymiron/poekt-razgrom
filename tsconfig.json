@@ -10,7 +10,12 @@
         //Также обрабатываем и js файлы
         "allowJs": true,
         "moduleResolution": "node",
-        //"baseUrl": ".",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./src/*"
+            ]
+        },
         //если какая-либо библиотека не имеет default import,
         // лоадеры вроде ts-loader или babel-loader автоматические создают их
         // вместо такого импорта
