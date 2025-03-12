@@ -1,0 +1,9 @@
+{
+	"Test Snippet": {
+	  "prefix": "test",
+	  "body": [
+		"console.log('Hello, world!');"
+	  ],
+	  "description": "Тестовый сниппет для проверки работы"
+	}
+  }

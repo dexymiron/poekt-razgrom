@@ -1,0 +1,22 @@
+{
+	"React Component": {
+	  "prefix": "rc",
+	  "body": [
+		"import { classNames } from \"shared/config/lib/classNames\";",
+		"import cls from \"./${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.module.scss\";",
+		"",
+		"interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
+		"  className?: string;",
+		"}",
+		"",
+		"export const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = ({ className }: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props) => {",
+		"  return (",
+		"    <div className={classNames(cls.${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}, {}, [])}>",
+		"    </div>",
+		"  );",
+		"};"
+	  ],
+	  "description": "Create React Component"
+	}
+  }
+  
