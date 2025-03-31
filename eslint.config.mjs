@@ -3,6 +3,7 @@ import globals from "globals";
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import i18next from "eslint-plugin-i18next";
 
 export default defineConfig([
   {
@@ -12,8 +13,9 @@ export default defineConfig([
     },
     plugins: {
       js,
+      i18next,
     },
-    extends: ["js/recommended"],
+    extends: ["js/recommended", "plugin:i18next/recommended"],
   },
   {
     ...tseslint.configs.recommended,
@@ -35,6 +37,7 @@ export default defineConfig([
       "react/jsx-props-no-spreading": "warn",
       "react/function-component-definition": "off",
       "no-shadow": "off",
+      "i18next/no-literal-string": ["error", { markupOnly: true }],
     },
   },
 ]);
