@@ -1,4 +1,4 @@
-import { classNames } from "shared/config/lib/classNames";
+import { classNames } from "shared/config/lib/classNames/classNames";
 import cls from "./ThemeSwitcher.module.scss";
 import { Theme, useTheme } from "app/providers/ThemeProvider";
 import LightIcon from "shared/assets/icons/theme-light.svg";
