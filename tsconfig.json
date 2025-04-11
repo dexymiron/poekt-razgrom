@@ -10,10 +10,25 @@
         //Также обрабатываем и js файлы
         "allowJs": true,
         "moduleResolution": "node",
-        "baseUrl": ".",
+        "baseUrl": "src",
         "paths": {
-            "*": [
-                "./src/*"
+            "app/*": [
+                "app/*"
+            ],
+            "shared/*": [
+                "shared/*"
+            ],
+            "entities/*": [
+                "entities/*"
+            ],
+            "features/*": [
+                "features/*"
+            ],
+            "widgets/*": [
+                "widgets/*"
+            ],
+            "pages/*": [
+                "pages/*"
             ]
         },
         //если какая-либо библиотека не имеет default import,
@@ -29,5 +44,10 @@
         "compilerOptions": {
             "module": "CommonJS"
         }
-    }
+    },
+    "include": [
+        "./config/jest/setupTests.ts",
+        "src",
+        "src/global.d.ts"
+    ],
 }

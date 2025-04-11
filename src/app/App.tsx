@@ -1,10 +1,10 @@
 import "./styles/index.scss";
-import { classNames } from "shared/config/lib/classNames/classNames";
-import { useTheme } from "app/providers/ThemeProvider";
 import { AppRouter } from "./providers/router";
-import { Navbar } from "widgets/Navbar";
-import { Sidebar } from "widgets/SideBar";
 import { Suspense } from "react";
+import { classNames } from "shared/lib/classNames/classNames";
+import { Navbar } from "widgets/Navbar";
+import { useTheme } from "./providers/ThemeProvider";
+import { SideBar } from "widgets/SideBar";
 
 const App = () => {
   const { theme } = useTheme();
@@ -14,7 +14,7 @@ const App = () => {
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">
-          <Sidebar />
+          <SideBar />
           <AppRouter />
         </div>
       </Suspense>
